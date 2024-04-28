@@ -4,66 +4,139 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/grey"
+    android:textAlignment="textStart"
+    android:textDirection="firstStrongRtl"
     tools:context=".UpgradeActivity">
+
+    <Button
+        android:id="@+id/add_button"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/orange"
+        android:text="Back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeWidth="4dp" />
 
     <Button
         android:id="@+id/cotton_button"
         android:layout_width="158dp"
         android:layout_height="152dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginBottom="100dp"
-        android:text="Button"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginBottom="13dp"
+        android:backgroundTint="@color/green"
+        android:text="Cotton"
+        app:cornerRadius="20dp"
         app:layout_constraintBottom_toTopOf="@+id/gold_button"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toStartOf="@+id/speed_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="#000000"
+        app:strokeWidth="4dp" />
 
     <Button
         android:id="@+id/speed_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
+        android:layout_width="158dp"
+        android:layout_height="152dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="13dp"
+        android:backgroundTint="@color/green"
+        android:text="Speed"
         app:barrierDirection="bottom"
-        tools:layout_editor_absoluteX="242dp"
-        tools:layout_editor_absoluteY="215dp" />
+        app:cornerRadius="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/health_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cotton_button"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeWidth="4dp" />
 
     <Button
         android:id="@+id/gold_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="44dp"
-        tools:layout_editor_absoluteY="452dp" />
+        android:layout_width="158dp"
+        android:layout_height="152dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="13dp"
+        android:backgroundTint="@color/green"
+        android:text="Gold"
+        app:cornerRadius="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/health_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cotton_button"
+        app:strokeWidth="4dp" />
 
     <Button
         android:id="@+id/health_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="242dp"
-        tools:layout_editor_absoluteY="454dp" />
+        android:layout_width="158dp"
+        android:layout_height="152dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="@color/green"
+        android:text="Health"
+        app:cornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/gold_button"
+        app:layout_constraintTop_toBottomOf="@+id/speed_button"
+        app:strokeWidth="4dp" />
 
     <Button
         android:id="@+id/upgrade_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="147dp"
-        tools:layout_editor_absoluteY="727dp" />
-
-    <Button
-        android:id="@+id/back_from_upgrades_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/advert_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
+        android:layout_width="328dp"
+        android:layout_height="67dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/orange"
+        android:text="Apply upgrade"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:strokeWidth="4dp" />
+
+    <Button
+        android:id="@+id/back_to_main_button"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/orange"
+        android:text="Back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeWidth="4dp" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="42dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toStartOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/coinsbabus" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="66dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="48dp"
+        android:fontFamily="@font/inter_bold"
+        android:text="123"
+        android:textColor="@color/orange"
+        android:textSize="32sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toStartOf="@+id/back_to_main_button"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeWidth="1dp" />
+
+
+    <!--this is some bullshit-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

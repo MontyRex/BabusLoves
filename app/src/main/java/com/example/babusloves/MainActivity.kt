@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         }
         upgrade.setOnClickListener {
             Toast.makeText(this, "Вы жмакнули на кнопку апгрейд", Toast.LENGTH_SHORT).show()
-            val intent = Intent(this, ZaglushkaActivity::class.java)
+            val intent = Intent(this, UpgradeActivity::class.java)
             startActivity(intent)
         }
         settings.setOnClickListener {
