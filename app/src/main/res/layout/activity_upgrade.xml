@@ -10,18 +10,6 @@
     tools:context=".UpgradeActivity">
 
     <Button
-        android:id="@+id/add_button"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:backgroundTint="@color/orange"
-        android:text="Ad"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:strokeWidth="4dp" />
-
-    <Button
         android:id="@+id/cotton_button"
         android:layout_width="158dp"
         android:layout_height="152dp"
@@ -100,18 +88,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:strokeWidth="4dp" />
 
-    <Button
-        android:id="@+id/back_to_main_button"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:backgroundTint="@color/orange"
-        android:text="Back"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:strokeWidth="4dp" />
-
     <ImageView
         android:id="@+id/coins_image"
         android:layout_width="42dp"
@@ -145,12 +121,36 @@
         android:layout_marginEnd="26dp"
         android:layout_marginBottom="23dp"
         android:text="@string/description"
+        android:textAlignment="center"
         android:textColor="@color/orange"
         android:textSize="24sp"
-        android:textAlignment="center"
+        android:visibility="visible"
+        app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/upgrade_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/add_button"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:backgroundTint="@color/grey"
+        android:contentDescription="TODO"
+        android:scaleType="centerInside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/addbabus" />
+
+    <ImageButton
+        android:id="@+id/back_to_main_button"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:backgroundTint="@color/grey"
+        android:contentDescription="TODO"
+        android:scaleType="centerInside"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/backarrowbabus" />
 
 
     <!--this is some bullshit-->
