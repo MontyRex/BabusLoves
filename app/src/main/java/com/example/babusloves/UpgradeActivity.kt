@@ -44,5 +44,9 @@ class UpgradeActivity : AppCompatActivity() {
             descript.text = "You pressed health"
         }
 
+        val upgrade:Button = findViewById(R.id.upgrade_button)
+        upgrade.setOnClickListener {
+
+        }
     }
 }
