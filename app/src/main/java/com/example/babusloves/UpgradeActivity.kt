@@ -3,10 +3,10 @@ package com.example.babusloves
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
+import android.widget.Toast
 
 class UpgradeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -45,8 +45,11 @@ class UpgradeActivity : AppCompatActivity() {
         }
 
         val upgrade:Button = findViewById(R.id.upgrade_button)
+        val pStat: PlayerStats = PlayerStats()
+        val mUser: MoneyUser = MoneyUser()
+        var howManyCoins: Int = mUser.coinsCurrency
         upgrade.setOnClickListener {
-
+            Toast.makeText(this, "У вас $howManyCoins coins", Toast.LENGTH_SHORT).show()
         }
     }
 }
