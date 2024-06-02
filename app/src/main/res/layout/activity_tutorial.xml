@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    tools:context=".TutorialActivity">
+
+    <ImageButton
+        android:id="@+id/main_button"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:backgroundTint="@color/grey"
+        android:contentDescription="TODO"
+        android:scaleType="centerInside"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/backarrowbabus" />
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/first_mage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/babusfirst" />
+
+    <Button
+        android:id="@+id/button_next"
+        android:layout_width="140dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/orange"
+        android:text="Next"
+        android:textSize="24sp"
+        app:cornerRadius="10dp"
+        app:strokeWidth="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/plain_text"
+        android:layout_width="360dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="540dp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="@font/inter_bold"
+        android:shadowColor="#000000"
+        android:shadowDx="1.5"
+        android:shadowDy="1.3"
+        android:shadowRadius="20"
+        android:text="It is you! \n Collect cotton to survive!"
+        android:textAlignment="center"
+        android:textColor="@color/orange"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

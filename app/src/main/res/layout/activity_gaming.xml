@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/container"
+    android:background="@drawable/back_grass_2"
+    tools:context=".GamingActivity">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/pause_layout"
+    android:background=""
+    android:visibility="invisible"
+    tools:context=".GamingActivity"/>
+
+
+    <ImageView
+        android:id="@+id/cotton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="bottom"
+        app:srcCompat="@drawable/cotton" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/grey"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme" />
+
+    <ImageView
+        android:id="@+id/myPlayer"
+        android:layout_width="70dp"
+        android:layout_height="90dp"
+        android:layout_gravity="center"
+        app:srcCompat="@drawable/player"
+        tools:layout_editor_absoluteX="178dp"
+        tools:layout_editor_absoluteY="494dp" />
+
+    <ImageView
+        android:id="@+id/babus"
+        android:layout_width="50dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center_vertical"
+        app:srcCompat="@drawable/babus"
+        tools:layout_editor_absoluteX="178dp"
+        tools:layout_editor_absoluteY="494dp" />
+
+    <ImageButton
+        android:id="@+id/house"
+        android:layout_width="87dp"
+        android:layout_height="69dp"
+        android:layout_gravity="left"
+        android:backgroundTint="@color/grey"
+        android:scaleType="centerInside"
+        app:srcCompat="@drawable/house"
+        android:contentDescription="TODO" />
+    <ImageButton
+        android:id="@+id/traktor"
+        android:layout_width="87dp"
+        android:layout_height="69dp"
+        android:backgroundTint="@color/grey"
+        android:layout_gravity="center_horizontal"
+        android:scaleType="centerInside"
+        app:srcCompat="@drawable/traktor"
+        android:contentDescription="TODO"/>
+
+    <ImageButton
+        android:id="@+id/pause"
+        android:layout_width="87dp"
+        android:layout_height="69dp"
+        android:layout_gravity="right"
+        android:backgroundTint="@color/grey"
+        android:scaleType="centerInside"
+        app:srcCompat="@drawable/pause"
+        android:contentDescription="TODO"/>
+
+
+</FrameLayout>
+
+
+

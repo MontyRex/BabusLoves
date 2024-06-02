@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    tools:context=".SettingsActivity">
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="230dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="36dp"
+        android:foregroundTint="@color/orange"
+        android:max="100"
+        android:progress="50"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/back__to_button" />
+
+    <SeekBar
+        android:id="@+id/seekBar2"
+        android:layout_width="230dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="36dp"
+        android:max="100"
+        android:progress="50"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar" />
+
+    <ImageButton
+        android:id="@+id/back__to_button"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:backgroundTint="@color/grey"
+        android:contentDescription="TODO"
+        android:scaleType="centerInside"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/backarrowbabus" />
+
+    <Button
+        android:id="@+id/delete_progress_button"
+        android:layout_width="322dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/orange"
+        android:text="Delete progress"
+        android:textSize="28sp"
+        app:cornerRadius="10sp"
+        app:layout_constraintBottom_toTopOf="@+id/remove_ads_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:strokeWidth="4dp" />
+
+    <Button
+        android:id="@+id/remove_ads_button"
+        android:layout_width="322dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="260dp"
+        android:backgroundTint="@color/orange"
+        android:text="Remove all ads"
+        android:textSize="28sp"
+        app:cornerRadius="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:strokeWidth="4dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="69dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="50dp"
+        android:text="MUS"
+        android:textColor="@color/orange"
+        android:textSize="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="69dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="180dp"
+        android:scaleX="1"
+        android:text="SFX"
+        android:textColor="@color/orange"
+        android:textScaleX="1"
+        android:textSize="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

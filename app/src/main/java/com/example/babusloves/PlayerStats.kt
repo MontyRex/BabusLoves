@@ -1,31 +1,41 @@
 package com.example.babusloves
 
-open class PlayerStats(private var healthX:Int = 1, private var speedX:Int = 1,
-                       private var coinsX:Float = 1F, private var cottonX:Float = 1F,
-                       private var costOfHealthX: Int = 50, private var costOfCoinsX: Int = 100,
-                       private var costOfSpeedX: Int = 10, private var costOfCottonX: Int = 75) {
+import android.widget.Toast
 
-    private var moneyUser = MoneyUser()
-    fun upHealthX(){
-        healthX += if (moneyUser.coinsCurrency == costOfHealthX) 1 else 0
+open class PlayerStats (open var healthX:Int = 1, open var speedX:Int = 1,
+                       open var coinsX:Float = 1F, open var cottonX:Float = 1F,
+                       open var levelOfHealth:Int = 1, open var levelOfSpeed:Int = 1,
+                       open var levelOfCoins:Int = 1, open var levelOfCotton:Int = 1,
+                       open var costOfHealthX: Int = -5, open var costOfCoinsX: Int = -1,
+                       open var costOfSpeedX: Int = -2, open var costOfCottonX: Int = -7) {
 
-        costOfHealthX *= 2
+    open var moneyUser:MoneyUser = MoneyUser()
+    fun upgradeHealthX(){
+        if (moneyUser.coinsCurrency >= costOfHealthX){
+            healthX += 1
+            moneyUser.setCoins(costOfHealthX)
+            costOfHealthX *= 2
+        }
     }
-    fun upSpeedX(){
-        speedX += if (moneyUser.coinsCurrency == costOfSpeedX) 1 else 0 // это ещё нужно будет переделать когда займемся игровым процессом
-        costOfSpeedX += 10
+    fun upgradeSpeedX(){
+        if (moneyUser.coinsCurrency >= costOfSpeedX){
+            speedX += 1
+            moneyUser.setCoins(costOfSpeedX)
+            costOfSpeedX *= 2
+        }
+
     }
-    fun upCoinsX(){
-        if (moneyUser.coinsCurrency == costOfCoinsX){
+    fun upgradeCoinsX(){
+        if (moneyUser.coinsCurrency >= costOfCoinsX){
             coinsX += 0.5F
-            moneyUser.coinsCurrency -= costOfCoinsX
+            moneyUser.setCoins(costOfCoinsX)
             costOfCoinsX *= 2
         }
     }
-    fun upCottonX(){
-        if (moneyUser.coinsCurrency == costOfCottonX){
+    fun upgradeCottonX(){
+        if (moneyUser.coinsCurrency >= costOfCottonX){
             cottonX += 0.5F
-            moneyUser.cottonCurrency -= costOfCottonX
+            moneyUser.setCoins(costOfCottonX)
             costOfCottonX *= 2
         }
     }

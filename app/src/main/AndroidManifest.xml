@@ -12,7 +12,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BabusLoves"
         tools:targetApi="31">
-
+        <activity
+            android:name=".GamingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TutorialThirdActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TutorialSecondActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TutorialActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SettingsActivity"
+            android:exported="false" />
         <activity
             android:name=".ZaglushkaActivity"
             android:exported="false" />
@@ -28,7 +42,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+        <service android:name=".MyMusicMenu"/>
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
